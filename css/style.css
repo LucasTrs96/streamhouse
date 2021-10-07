@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+body{
+    background-color: rgb(33, 37, 41);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.escrita-mao{
+    color: white;
+    font-family: 'Graduate', cursive;
+    text-shadow: black 5px 5px 5px;
+}
+
+h1{
+    color: white;
+}
+
+#formCSS{
+    color: white;
+}
+
+th{
+    background-color: gray;
+    color: rgb(33, 37, 41);
+}
+
+td{
+    color: rgb(33, 37, 41);
+}
+
+tr{
+    background-color: white;
+}
+
+.table{
+    color: rgb(33, 37, 41);
+    background-color: white;
+}
+
+.paragraph{
+    color: white;
+}
