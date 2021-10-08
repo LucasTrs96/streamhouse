@@ -1,3 +1,5 @@
+CREATE DATABASE id17725093_streamhouse;
+
 USE id17725093_streamhouse;
 
 CREATE TABLE gamehouse (

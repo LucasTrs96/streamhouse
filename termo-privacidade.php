@@ -71,72 +71,28 @@ include("config.php");
             </ul>
         </div>
     </nav>
-
-    <br>
-    <h1>Editar Sala</h1>
-    <br>
-
-    <?php
-
-    $sqlBuscar = "SELECT * FROM sala 
-                    WHERE id_sala=" . $_REQUEST["id_sala"];
-
-    $res = mysqli_query($conexao, $sqlBuscar) or die($conexao->error);
-
-    $row = $res->fetch_object();
-
-    ?>
-
-    <form action="salvar-sala.php?page=salvar-sala" method="POST" id="formCSS">
-        <input type="hidden" name="acao" value="editar">
-
-        <input type="hidden" name="id_sala" value="<?php print $row->id_sala; ?>">
-        <div class="form-group">
-            <label>Game House</label>
-            <?php
-            $sqlBuscar2 = "SELECT * FROM gamehouse";
-
-            $res2 = mysqli_query($conexao, $sqlBuscar2) or die($conexao->error);
-
-            $qtd2 = $res2->num_rows;
-
-            if ($qtd2 > 0) {
-                print "<select name='gamehouse_id_gh' class='form-control'>";
-                print "<option> Selecione a Game House </option>";
-                while ($row2 = $res2->fetch_object()) {
-                    print "<option value='" . $row2->id_gh . "' " . ($row2->id_gh == $row->gamehouse_id_gh ? "selected" : "") . ">" . $row2->raz_gh . "</option>";
-                }
-                print "</select>";
-            } else {
-                print "<div class='alert alert-danger'>Não há nenhum resultado</div>";
-            }
-            ?>
-
-            <div class="form-group">
-                <label>Nome da Sala</label>
-                <input type="text" id="nome_sala" name="nome_sala" class="form-control" placeholder="Tem que ser nome de Transformers" required>
-            </div>
-
-            <div class="form-group">
-                <label>Capacidade</label>
-                <input type="numb" id="cap_sala" name="cap_sala" class="form-control" placeholder="Somente Números" required>
-            </div>
-
-            <div class="form-group">
-                <label>Categoria</label>
-                <input type="text" id="cat_sala" name="cat_sala" class="form-control" placeholder="Ex.: Lives, Gravações, etc..." required>
-            </div>
-
-            <div class="form-group">
-                <label>Descrição</label>
-                <input type="text" id="desc_sala" name="desc_sala" class="form-control" placeholder="Resumo" required>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-success">Salvar</button>
-            </div>
-    </form>
-
+    <main class="container-fluid">
+        <section class="row mx-5 mt-3 p-3 mb-3 bg-white rounded">
+            <h2>Política Privacidade</h2>
+            <p>A sua privacidade é importante para nós. É política do Stream House! respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href=https://streamhouse.000webhostapp.com/index.php>Stream House!</a>, e outros sites que possuímos e operamos.</p>
+            <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado. </p>
+            <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+            <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
+            <p>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas <a href='https://politicaprivacidade.com' target='_BLANK'>políticas de privacidade</a>. </p>
+            <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
+            <p>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</p>
+            <h3>Compromisso do Usuário</h3>
+            <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Stream House! oferece no site e com caráter enunciativo, mas não limitativo:</p>
+            <ul>
+                <li>A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</li>
+                <li>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, <a style='color: inherit !important; text-decoration:none !important;' href='https://jogoshoje.io'>jogos de hoje</a> ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</li>
+                <li>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Stream House!, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
+            </ul>
+            <h3>Mais informações</h3>
+            <p>Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</p>
+            <p>Esta política é efetiva a partir de <strong>Outubro</strong>/<strong>2021</strong>.</p>
+        </section>
+    </main>
     </footer>
     <div class="bg-white text-muted text-center p-1 pt-3">
         <h6 class="small">Stream House&copy; 2021 || LucasTrs_</h6>

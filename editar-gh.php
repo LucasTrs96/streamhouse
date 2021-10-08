@@ -92,28 +92,34 @@ include("config.php");
 
         <div class="form-group">
             <label>Razão Social</label>
-            <input type="text" name="raz_gh" class="form-control" value="<?php print $row->raz_gh; ?>">
+            <input type="text" id="raz_gh" name="raz_gh" class="form-control" placeholder="Ex.: Team Liquid BR - LTDA" required>
         </div>
+
         <div class="form-group">
             <label>Endereço</label>
-            <input type="text" name="end_gh" class="form-control" value="<?php print $row->end_gh; ?>">
+            <input type="text" id="end_gh" name="end_gh" class="form-control" placeholder="Cidade/Bairro, Quadra/Chácara/Lote, Rua, Número, Complemento, etc..." required>
         </div>
+
         <div class="form-group">
             <label>C.E.P.</label>
-            <input type="text" name="cep_gh" class="form-control" value="<?php print $row->cep_gh; ?>">
+            <input type="text" id="cep_gh" name="cep_gh" class="form-control" maxlength="8" placeholder="Somente números" required>
         </div>
+
         <div class="form-group">
-            <label>C.N.P.J</label>
-            <input type="text" name="cnpj_gh" class="form-control" value="<?php print $row->cnpj_gh; ?>">
+            <label>C.N.P.J.</label>
+            <input type="text" id="cnpj_gh" name="cnpj_gh" class="form-control" maxlength="14" placeholder="Somente números" required>
         </div>
+
         <div class="form-group">
             <label>Contato</label>
-            <input type="text" name="contato_gh" class="form-control" value="<?php print $row->contato_gh; ?>">
+            <input type="text" id="contato_gh" name="contato_gh" class="form-control" placeholder="Telefone/Ceular" required>
         </div>
+
         <div class="form-group">
             <label>E-Mail</label>
-            <input type="text" name="email_gh" class="form-control" value="<?php print $row->email_gh; ?>">
+            <input type="email" id="email_gh" name="email_gh" class="form-control" placeholder="E-Mail" required>
         </div>
+
         <div class="form-group">
             <button type="submit" class="btn btn-success">Salvar</button>
         </div>

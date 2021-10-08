@@ -114,37 +114,37 @@ include("config.php");
 
             <div class="form-group">
                 <label>Nome do Streamer</label>
-                <input type="text" name="nome_streamer" class="form-control" value="<?php print $row->nome_streamer; ?>">
+                <input type="text" id="nome_streamer" name="nome_streamer" class="form-control" placeholder="Nome Completo" required>
             </div>
 
             <div class="form-group">
                 <label>Sexo</label>
-                <input type="text" name="sexo_streamer" class="form-control" value="<?php print $row->sexo_streamer; ?>">
+                <input type="text" id="sexo_streamer" name="sexo_streamer" class="form-control" placeholder="Masculino/Feminino/Outros" required>
             </div>
 
             <div class="form-group">
                 <label>Data de Nascimento</label>
-                <input type="date" name="nasc_streamer" class="form-control" value="<?php print $row->nasc_streamer; ?>">
+                <input type="date" id="nasc_streamer" name="nasc_streamer" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label>C.P.F.</label>
-                <input type="text" name="cpf_streamer" class="form-control" value="<?php print $row->cpf_streamer; ?>">
+                <input type="text" id="cpf_streamer" name="cpf_streamer" class="form-control" maxlength="11" placeholder="Somente números" required>
             </div>
 
             <div class="form-group">
                 <label>Endereço</label>
-                <input type="text" name="end_streamer" class="form-control" value="<?php print $row->end_streamer; ?>">
+                <input type="text" id="end_streamer" name="end_streamer" class="form-control" placeholder="Cidade/Bairro, Quadra/Chácara/Lote, Rua, Número, Complemento, etc..." required>
             </div>
 
             <div class="form-group">
                 <label>E-Mail</label>
-                <input type="text" name="email_streamer" class="form-control" value="<?php print $row->email_streamer; ?>">
+                <input type="email" id="email_streamer" name="email_streamer" class="form-control" placeholder="E-Mail" required>
             </div>
 
             <div class="form-group">
                 <label>Contato</label>
-                <input type="text" name="contato_streamer" class="form-control" value="<?php print $row->contato_streamer; ?>">
+                <input type="text" id="contato_streamer" name="contato_streamer" class="form-control" placeholder="Telefone/Ceular" required>
             </div>
 
             <div class="form-group">
